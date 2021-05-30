@@ -1,0 +1,38 @@
+﻿
+1. Komut Tasarım Deseni
+2. Dekoratör Tasarım Deseni
+3. Ziyaretçi Tasarım Deseni
+4. Prototip Desen
+
+1. Komut Tasarım Deseni
+
+Komut tasarım desenini MusteriBilgiGuncelleme.cs formu içerisinde kullandım. Form kodlarında 75. satırda 
+RemoteControlden bir nesne oluşturdum. Sonrasında hesap kapatılma onayı verildiğinde hesap kapatılıp 
+96. ve 97. satırda remoteControl çalıştırılarak çalışma bilgisi Debug 'a yazdırılıyor.
+Hesap kapatılma onayı verilmediğinde ise hesap kapatılma işlemi gerçekleşmiyor ve 105. ve 106. satırda 
+remoteControl çalıştırılıp çalışma bilgisi Debug 'a yazdırılıyor.
+
+2. Dekoratör Tasarım Deseni
+
+Dekoratör tasarim desenini kullanmak için KullaniciIptal olaylarına göre kullanacağım KullaniciIptalOnay ve
+KullaniciIptalRed class larını oluşturdum. Kullanıcı hesabını kapatmaya MessageBox da evet yanıtını vererek
+onay verdiğinde dialogResult ile bunu anlayıp sonrasında müşteri classını KullaniciIptalOnay classının 
+özelliğini kazandırıyorum. Böylece hesap kapatma işlemi tamamlanıp bu class içerisinde özellik sayesinde 
+ekrana hesap kapatılma bilgisi veriliyor. Hesap kapatılma işlemi onaylanmadığında ise Müsteri tipindeki
+nesne KullaniciIptalRed classının özelliğini kazanıyor ve class özelliği sayesinde kapatılma işleminin 
+olmadığı ekrana mesaj şeklinde veriliyor.
+
+3. Ziyaretçi Tasarım Deseni
+
+Ziyaretçi Tasarım desenini Login işlemi yaparken giriş yapmaya çalışan kullanıcının hangi türde olduğunu 
+ayırt ederken kullandım. Bunun için ILoginTuru adlı interface'i ve LoginTuruDisplay class'ının oluşturdum.
+Sonrasında login işlemi yapılırken parametre olarak gönderilen kullanıcının admin veya müşteri olduğunun 
+ayrımı yapılıp ona göre anaSayfa açılıyor.
+
+4. Prototip Deseni
+
+Prototip desenini Duyurular.cs içerisinde kullandım. Veritabanından sorguyla Duyuru listesini çekerken
+her gelen yeni bir duyuru için new diyerek yeni bir Duyuru oluşturmak yerine yeni oluşturduğum IDuyuru 
+interfacesi'ni Duyuru classında classı IDuyuru'dan implement ederek sağladım. İçerisindeki clone özelliği
+ile veritabanından her okunan duyuru için yeni bir duyuru oluşturmayıp klonlama yaptım.
+

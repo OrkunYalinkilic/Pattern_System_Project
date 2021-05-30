@@ -1,0 +1,9 @@
+﻿Komut tasarım desenini kullandığım formun içerisinde Dekaratör 
+deseni de kullanıdığım için formu Dekoratör tasarim içerisinden 
+inceleyebilirsiniz.
+
+Yani MusteriBilgiGuncelleme formunun içerisinde hem komut tasarim 
+hem de dekoratör tasarim desenini kullandım. 
+
+(DekoratörTasarimDeseni içerisindeki MusteriBilgiGuncelleme.cs formu)
+
